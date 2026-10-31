@@ -4,5 +4,5 @@
 
 - 訓練：`./train.sh sdxl_train_network.py train.toml`；所有指令經 `run.sh` 在容器內執行，快取留在專案目錄。
 - 角色 trigger word 放在 caption 第一個 token，`train.toml` 的 `keep_tokens` 等於 trigger 數。
-- `sd-scripts/` 固定在 README 記錄的 commit，且已移除 `requirements.txt` 的 `-e .`；升級前先問使用者。
+- `sd-scripts/` 是 git submodule（kohya-ss/sd-scripts），pointer 即版本。需要新功能或修正時直接 `git -C sd-scripts fetch && git -C sd-scripts checkout <ref>` 更新，再提交新 pointer；更新後以 `train.toml` 跑 smoke test（1 epoch）確認仍可訓練，通過才提交。
 - 驗證用 ComfyUI；把 LoRA 複製進其 loras 目錄前，先問使用者。

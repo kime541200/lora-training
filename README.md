@@ -5,9 +5,7 @@
 ## 重建環境
 
 ```bash
-git clone https://github.com/kohya-ss/sd-scripts sd-scripts
-git -C sd-scripts checkout 11d8cedd0c67b93a10f8b2d75f43554f6f12c794   # 已驗證可訓練的 commit
-sed -i '/^-e \.$/d' sd-scripts/requirements.txt                        # 本地唯一改動：移除 `-e .`
+git clone --recurse-submodules git@github.com:kime541200/lora-training.git
 docker build -t train-lora:latest .
 ```
 
