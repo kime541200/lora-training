@@ -1,6 +1,6 @@
 # lora-training
 
-以 Docker 跑 kohya `sd-scripts` 訓練 SDXL LoRA。
+以 Docker 跑 kohya `sd-scripts` 訓練 LoRA（SD1.5 / SDXL / Flux / SD3 等）。SDXL 是已驗證流程；其他家族見 `.agents/skills/train-lora/MODELS.md`。
 
 ## 重建環境
 
