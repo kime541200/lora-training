@@ -1,0 +1,9 @@
+models/
+output*/
+dataset/
+images/
+.src/
+.hf/
+.home/
+.pylibs/
+sd-scripts/

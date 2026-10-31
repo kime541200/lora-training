@@ -1,0 +1,2 @@
+ohwxgirl, upper body, smile, cafe, window light, photorealistic --w 1024 --h 1024 --l 7 --s 28 --d 42
+ohwxgirl, full body, walking in a snowy street, winter coat, photorealistic --n lowres, bad anatomy --w 1024 --h 1024 --l 7 --s 28 --d 42
