@@ -1,6 +1,6 @@
 # lora-training
 
-以 Docker（`train-lora:latest`）跑 kohya `sd-scripts` 訓練 LoRA（SD1.5 / SDXL / Flux / SD3 等；只有 SDXL 有已驗證模板）。GPU：RTX 4060 Ti 16 GB。流程細節與模板在 `.agents/skills/train-lora/`，訓練、資料集、驗證相關工作先讀它的 `SKILL.md`。
+以 Docker（`train-lora:latest`）跑 kohya `sd-scripts` 訓練 LoRA（SD1.5 / SDXL / Flux / SD3 等；只有 SDXL 有已驗證模板）。開始前用 `nvidia-smi` 確認 GPU 與 VRAM，據此調整 batch size 與精度。流程細節與模板在 `.agents/skills/train-lora/`，訓練、資料集、驗證相關工作先讀它的 `SKILL.md`。
 
 - 訓練：`./train.sh <trainer>.py <config>.toml`（目前的 ohwxgirl 實驗用 `sdxl_train_network.py train.toml`）；所有指令經 `run.sh` 在容器內執行，快取留在專案目錄。
 - 角色 trigger word 放在 caption 第一個 token，`train.toml` 的 `keep_tokens` 等於 trigger 數。
